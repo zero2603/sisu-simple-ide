@@ -1,0 +1,115 @@
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+@media (prefers-color-scheme: dark) {
+  html {
+    color-scheme: dark;
+  }
+  body {
+    color: white;
+    background: black;
+  }
+}
+
+
+.files {
+  border: solid 1px #ecf0f1;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.file {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 24px;
+  cursor: pointer;
+  border-bottom: solid 1px #ecf0f1;
+  border-radius: 10px;
+  padding: 5px;
+}
+
+.file.active, .file:hover {
+  background-color: #ecf0f1;
+}
+
+.file-name {
+  flex: 1;
+}
+
+.file .bi.bi-trash {
+  cursor: pointer;
+}
+
+.file .bi.bi-trash:hover {
+  color: red;
+}
+
+.tools {
+  display: flex;
+  gap: 10px;
+}
+
+.tool {
+  font-size: 20px;
+  border: solid 1px #ecf0f1;
+  border-radius: 5px;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.tool:hover {
+  background-color: #ecf0f1;
+}
+
+.editor {
+  box-sizing: border-box;
+  border: solid 1px #ecf0f1;
+  border-radius: 10px;
+  margin-top: 24px;
+}
+
+.editor-content {
+  padding: 16px;
+  min-height: 300px;
+  border-radius: 10px;
+  height: max-content;
+  font-style: italic;
+  color: gray;
+  background-color: #ecf0f1;
+}
+
+.editor-content.editable {
+  font-style: normal;
+  color: initial;
+  background-color: #ffffff;
+}
+
+.editor-content:focus {
+  border: none !important;
+  outline: none !important;
+}
+
+.editor-content a {
+  color: #0d6efd;
+  text-decoration: underline;
+  cursor: pointer;
+}
